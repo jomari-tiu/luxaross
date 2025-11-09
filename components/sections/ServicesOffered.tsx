@@ -63,12 +63,12 @@ export default function ServicesOffered() {
         </Text>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
         {SERVICES.map((service, i) => (
           <div
             key={i}
             className={classNames(
-              "p-8 rounded-lg text-center",
+              "p-4 text-center",
               i % 2 === 0 ? "bg-subtle-light" : "bg-subtle-darker"
             )}
           >

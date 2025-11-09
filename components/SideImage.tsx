@@ -21,17 +21,25 @@ export default function SideImage({
     <PageWrapper
       size="wide"
       id={id}
-      className={classNames(imagePosition === "left" ? "pr-[5%]" : "pl-[5%]")}
+      className={classNames(
+        imagePosition === "left" ? "lg:pr-[5%]" : "lg:pl-[5%]"
+      )}
     >
-      <div className="flex items-center justify-between gap-[5%]">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-[5%]">
         {imagePosition === "right" ? (
-          <div className="w-1/2 space-y-4">{content}</div>
+          <div className="lg:w-1/2 w-[90%] space-y-4 py-10">{content}</div>
         ) : null}
-        <div className={classNames("w-1/2")}>
-          <Image src={src} alt={alt} width={1000} height={1000} />
+        <div className={classNames(" w-full lg:w-1/2 lg:h-auto h-48")}>
+          <Image
+            src={src}
+            alt={alt}
+            width={1000}
+            height={1000}
+            className="h-full w-full object-cover"
+          />
         </div>
         {imagePosition === "left" ? (
-          <div className="w-1/2 space-y-4">{content}</div>
+          <div className="lg:w-1/2 w-[90%] space-y-4 py-10">{content}</div>
         ) : null}
       </div>
     </PageWrapper>

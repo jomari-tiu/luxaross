@@ -62,7 +62,15 @@ export default function MyVehicle() {
               color="white"
               className="text-center"
             >
-              Black Honda CR-V EX-L
+              Black Honda
+            </Text>
+            <Text
+              size="heading"
+              variant="primary"
+              color="white"
+              className="text-center"
+            >
+              CR-V EX-L
             </Text>
           </div>
           <ul className=" flex flex-wrap gap-2 w-full justify-center">

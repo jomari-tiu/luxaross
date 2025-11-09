@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 const SIZE = {
   body: "text-md",
-  heading: "text-7xl",
+  heading: "text-4xl md:text-5xl lg:text-7xl",
   subheading: "text-2xl",
   caption: "text-sm",
 } as const;

@@ -14,8 +14,8 @@ type PageWrapperProps = {
 const SIZE = {
   default: "w-[90%] mx-auto",
   wide: "w-full mx-auto",
-  narrow: "w-[70%] mx-auto",
-  narrowest: "w-[50%] mx-auto",
+  narrow: "w-[90%] md:w-[70%] mx-auto",
+  narrowest: "w-[90%] md:w-[50%] mx-auto",
 } as const;
 
 const BACKGROUND = {
