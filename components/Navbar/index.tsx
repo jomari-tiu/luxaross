@@ -1,3 +1,5 @@
+"use client";
+
 import { BoxLogo } from "@/public/assets/images";
 import Image from "next/image";
 import Link from "next/link";

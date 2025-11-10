@@ -33,7 +33,7 @@ const SPECS = [
     text: "Climate control for optimal comfort in any weather",
   },
   {
-    icon: <MdOutlineCleanHands className="text-5xl text-white" />,
+    icon: <MdOutlineCleanHands className="text-5xl text-accent" />,
     text: "Professional presentation — always immaculate inside and out",
     highlight: true,
   },
@@ -59,7 +59,7 @@ export default function MyVehicle() {
             <Text
               size="heading"
               variant="primary"
-              color="white"
+              color="accent"
               className="text-center"
             >
               Black Honda
@@ -67,7 +67,7 @@ export default function MyVehicle() {
             <Text
               size="heading"
               variant="primary"
-              color="white"
+              color="accent"
               className="text-center"
             >
               CR-V EX-L
@@ -78,20 +78,12 @@ export default function MyVehicle() {
               <li
                 key={i}
                 className={classNames(
-                  "flex gap-2 w-48 h-48 rounded-md p-2 items-center text-center flex-col justify-center",
-                  item.highlight
-                    ? " bg-accent"
-                    : i % 2 === 0
-                    ? "bg-[#3d3d3d]"
-                    : "bg-subtle-darker"
+                  "flex gap-2 w-48 h-48 p-2 items-center text-center flex-col justify-center",
+                  i % 2 === 0 ? "bg-[#3d3d3d]" : "bg-subtle-darker"
                 )}
               >
                 {item.icon}
-                <Text
-                  size="body"
-                  variant="secondary"
-                  color={item.highlight ? "white" : "subtle"}
-                >
+                <Text size="body" variant="secondary" color="subtle">
                   {item.text}
                 </Text>
               </li>

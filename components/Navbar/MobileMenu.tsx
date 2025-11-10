@@ -9,7 +9,12 @@ import { CiMenuKebab } from "react-icons/ci";
 
 export default function MobileMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window?.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth;
+    }
+    return 0;
+  });
 
   const shouldShowMobileMenu = isMobileMenuOpen && windowWidth <= 1024;
 

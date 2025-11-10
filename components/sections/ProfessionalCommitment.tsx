@@ -1,14 +1,15 @@
 import Text from "../Text";
 import PageWrapper from "../PageWrapper";
 import Button from "../Button";
-import { MdStar } from "react-icons/md";
+import { BoxLogo } from "@/public/assets/images";
+import Image from "next/image";
 
 export default function ProfessionalCommitment() {
   return (
     <PageWrapper size="narrowest" withYSpacing>
       <div className="text-center space-y-2">
         <div className="flex justify-center mb-2">
-          <MdStar className="text-8xl text-accent" />
+          <Image src={BoxLogo} alt="Box Logo" width={200} height={200} />
         </div>
 
         <Text size="heading" variant="primary" color="accent">
