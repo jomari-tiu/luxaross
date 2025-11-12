@@ -18,6 +18,44 @@ const RATE_FEATURES = [
   "Gratuity appreciated but never required",
 ];
 
+const PRICING_PACKAGES = [
+  {
+    duration: "4 Hours (Half-Day Service)",
+    description: "Ideal for short trips, appointments, or errands",
+    price: "$220-$300",
+  },
+  {
+    duration: "8 Hours (Full-Day Service)",
+    description: "Perfect for business trips or full-day use",
+    price: "$450-$600",
+  },
+  {
+    duration: "12 Hours (Extended Day)",
+    description: "Includes multiple destinations, waiting time",
+    price: "$700-$1000",
+  },
+  {
+    duration: "24 Hours (Full-Day + Night)",
+    description: "For long-distance or full personal chauffeur service",
+    price: "$1200-$1500",
+  },
+];
+
+const ADD_ONS = [
+  {
+    name: "Airport Pickup / Drop-off",
+    price: "+$60–$100",
+  },
+  {
+    name: "Extra Hour",
+    price: "+$60–$90 per hour",
+  },
+  {
+    name: "Luxury Package (Suit, Water)",
+    price: "+$70",
+  },
+];
+
 export default function BookingRates() {
   return (
     <PageWrapper
@@ -77,6 +115,88 @@ export default function BookingRates() {
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="w-full">
+          <Text
+            size="subheading"
+            variant="primary"
+            weight="bold"
+            color="white"
+            className="text-center mb-6"
+          >
+            Service Packages
+          </Text>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {PRICING_PACKAGES.map((pkg, i) => (
+              <div
+                key={i}
+                className="bg-black/40 backdrop-blur-sm border border-accent/20 rounded-lg p-6 hover:border-accent/50 transition-all duration-300"
+              >
+                <Text
+                  size="subheading"
+                  variant="primary"
+                  color="accent"
+                  weight="bold"
+                  className="mb-2"
+                >
+                  {pkg.duration}
+                </Text>
+                <Text
+                  size="body"
+                  variant="secondary"
+                  color="subtle"
+                  className="mb-4"
+                >
+                  {pkg.description}
+                </Text>
+                <Text
+                  size="subheading"
+                  variant="primary"
+                  color="white"
+                  weight="bold"
+                >
+                  {pkg.price}
+                </Text>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-full max-w-2xl mx-auto">
+          <Text
+            size="subheading"
+            variant="primary"
+            weight="bold"
+            color="white"
+            className="text-center mb-6"
+          >
+            Add-Ons (Optional)
+          </Text>
+
+          <div className="bg-black/40 backdrop-blur-sm border border-accent/20 rounded-lg p-6">
+            <ul className="space-y-4">
+              {ADD_ONS.map((addon, i) => (
+                <li key={i} className="flex justify-between items-center">
+                  <div className="flex items-center gap-3">
+                    <span className="text-accent text-lg">•</span>
+                    <Text size="body" variant="secondary" color="subtle">
+                      {addon.name}
+                    </Text>
+                  </div>
+                  <Text
+                    size="body"
+                    variant="primary"
+                    color="accent"
+                    weight="bold"
+                  >
+                    {addon.price}
+                  </Text>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="text-center">

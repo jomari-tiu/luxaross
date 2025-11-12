@@ -1,4 +1,4 @@
-import { SideInterior } from "@/public/assets/images";
+import { RossDiaz } from "@/public/assets/images";
 import Text from "../Text";
 import SideImage from "../SideImage";
 
@@ -6,7 +6,7 @@ export default function About() {
   return (
     <SideImage
       id="about"
-      src={SideInterior.src}
+      src={RossDiaz.src}
       alt="About Me"
       imagePosition="left"
       content={

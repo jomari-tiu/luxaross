@@ -3,7 +3,6 @@ import Text from "../Text";
 import {
   MdPhone,
   MdEmail,
-  MdLanguage,
   MdSchedule,
   MdSupportAgent,
   MdCheckCircle,
@@ -14,17 +13,12 @@ const CONTACT_INFO = [
   {
     icon: <MdPhone className="text-lg text-accent" />,
     label: "Phone",
-    value: "[Your Phone Number]",
+    value: "6502387459",
   },
   {
     icon: <MdEmail className="text-lg text-accent" />,
     label: "Email",
-    value: "[Your Email Address]",
-  },
-  {
-    icon: <MdLanguage className="text-lg text-accent" />,
-    label: "Website",
-    value: "[Your Website URL]",
+    value: "Arbd.fx21@gmail.com",
   },
 ];
 
