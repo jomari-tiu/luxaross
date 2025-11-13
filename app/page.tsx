@@ -7,7 +7,7 @@ import ServicesOffered from "@/components/sections/ServicesOffered";
 import WhyChoose from "@/components/sections/WhyChoose";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import BookingRates from "@/components/sections/BookingRates";
-import Testimonials from "@/components/sections/Testimonials";
+// import Testimonials from "@/components/sections/Testimonials";
 import Contact from "@/components/sections/Contact";
 import ProfessionalCommitment from "@/components/sections/ProfessionalCommitment";
 
