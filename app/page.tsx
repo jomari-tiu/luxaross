@@ -23,7 +23,7 @@ export default function Home() {
       <ServiceAreas />
       <WhyChoose />
       <BookingRates />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <ProfessionalCommitment />
     </main>
